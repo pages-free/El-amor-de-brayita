@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naguara brayan</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <h1>Amor de Brayita</h1>
+    <p>
+        Había una vez un joven de raza llamado <strong>Brayan</strong>, aunque todos lo conocían como <strong>Brayita</strong>. Era un chamo humilde que había pasado muchas necesidades a lo largo de su vida. Sin embargo, su suerte cambió cuando conoció a <strong>Johalis</strong>, una chica generosa que le ofreció huevos fritos, mango y, lo más importante, unas botas para que pudiera ir a chambear.
+    </p>
+    <p>
+        A partir de ese momento, Brayita y Johalis comenzaron a tener varios encuentros. El amor entre ellos creció rápidamente. Brayita era un apasionado del baloncesto y frecuentemente iba a la casa de Johalis a tomar agua después de jugar.
+    </p>
+    <p>
+        Con el tiempo, su relación se volvió más seria y ambos decidieron que era hora de dar el siguiente paso: iban a pedir su mano, querían ser pareja oficialmente. Sin embargo, el destino tenía otros planes para ellos.
+    </p>
+    <p>
+        Un día, mientras Brayita jugaba baloncesto, sintió la necesidad de usar el baño. Sin pensarlo dos veces, le pidió a Johalis que le prestara el baño. Sin embargo, lo que Brayita no sabía era que había una trampa en el inodoro. 
+    </p>
+    <p>
+        Con un tono curioso, Brayita preguntó: <em>“¿Quién fue el último en ir al baño?”</em>. Johalis, con una sonrisa en su rostro, respondió: <strong>“Yo…”</strong>. 
+    </p>
+    <p>
+        En ese momento, el ambiente se tornó incómodo y la magia de su amor se desvaneció. A pesar de todo lo bonito que habían construído, esa simple pregunta marcó el fin de su relación. 
+    </p>
+    <p>
+        Y así, el amor de Brayita y Johalis se convirtió en una historia que recordarían, no solo por los momentos felices, sino también por la lección que aprendieron sobre la importancia de la comunicación y la confianza.
+    </p>
+    <footer>
+        <p><em>Fin</em></p>
+    </footer>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naguara Brayan</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Tu contenido actual aquí -->
+        <button id="btnLeer" style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        ">🔊 Leer historia</button>
+    
+        <script>
+            document.getElementById('btnLeer').addEventListener('click', () => {
+                const texto = document.body.innerText;
+                const speech = new SpeechSynthesisUtterance();
+                
+                // Configuración
+                speech.text = texto;
+                speech.lang = 'es-ES';
+                speech.rate = 1.0;
+    
+                // Busca una voz en español
+                const voces = window.speechSynthesis.getVoices();
+                const vozEs = voces.find(voz => voz.lang.includes('es'));
+                if (vozEs) speech.voice = vozEs;
+    
+                // Reproducir
+                window.speechSynthesis.speak(speech);
+    
+                // Cambiar el botón mientras se reproduce
+                const btn = document.getElementById('btnLeer');
+                btn.textContent = '⏸️ Pausar';
+                btn.onclick = () => window.speechSynthesis.cancel();
+            });
+    
+            // Cargar voces (necesario en Firefox)
+            window.speechSynthesis.onvoiceschanged = () => {
+                console.log('Voces cargadas:', window.speechSynthesis.getVoices());
+            };
+        </script>
+    </body>
+    </html>
+</body>
+<hr>
+</html>

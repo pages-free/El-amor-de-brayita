@@ -1,0 +1,47 @@
+/* estilos.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #202020;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    background: #818181;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.932);
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+p:hover {
+    transform: scale(1.02);
+}
+
+strong {
+    color: #da231c; /* Color para el texto en negrita */
+}
+
+em {
+    color: #52cff5; /* Color para el texto en cursiva */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-style: italic;
+    color: #f7f7f7;
+}
